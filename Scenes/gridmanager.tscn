@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://kbedj0l62hq7"]
+[gd_scene load_steps=7 format=3 uid="uid://bc7htnbebfapd"]
 
-[ext_resource type="Texture2D" uid="uid://b7xqtd1ggfmbv" path="res://Sprites/FE 6/Maps/Desert.png" id="1_6vgcr"]
-[ext_resource type="Script" path="res://Scenes/gridmanager.gd" id="1_m3pc0"]
-[ext_resource type="Texture2D" uid="uid://cqcftenjqlxt5" path="res://Sprites/map_ui.png" id="21_ns8ui"]
+[ext_resource type="Script" path="res://Scenes/gridmanager.gd" id="1_88nyr"]
+[ext_resource type="Texture2D" uid="uid://b7xqtd1ggfmbv" path="res://Sprites/FE 6/Maps/Desert.png" id="2_0v3g5"]
+[ext_resource type="Texture2D" uid="uid://cqcftenjqlxt5" path="res://Sprites/map_ui.png" id="3_frits"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfeak"]
-texture = ExtResource("1_6vgcr")
+texture = ExtResource("2_0v3g5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -495,7 +495,7 @@ texture = ExtResource("1_6vgcr")
 30:30/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g8r5m"]
-texture = ExtResource("21_ns8ui")
+texture = ExtResource("3_frits")
 0:0/0 = 0
 1:0/0 = 0
 
@@ -503,12 +503,10 @@ texture = ExtResource("21_ns8ui")
 sources/0 = SubResource("TileSetAtlasSource_bfeak")
 sources/1 = SubResource("TileSetAtlasSource_g8r5m")
 
-[node name="debug_theo" type="Node2D"]
+[node name="gridmanager" type="Node"]
+script = ExtResource("1_88nyr")
 
-[node name="gridmanager" type="Node" parent="."]
-script = ExtResource("1_m3pc0")
-
-[node name="grid" type="TileMap" parent="gridmanager"]
+[node name="grid" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_cqjbm")
 format = 2
@@ -529,4 +527,4 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
 
-[node name="characters" type="Node" parent="gridmanager"]
+[node name="characters" type="Node" parent="."]
