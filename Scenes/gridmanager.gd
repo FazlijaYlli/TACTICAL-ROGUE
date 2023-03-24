@@ -20,3 +20,4 @@ func _process(delta):
 					character_selected = character
 				else:
 					character_selected = null
+		print_debug(character_selected)
